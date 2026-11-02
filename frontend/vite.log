@@ -1,0 +1,116 @@
+
+> decoy-ui@1.0.0 dev
+> vite
+
+
+  [32m[1mVITE[22m v5.4.2[39m  [2mready in [0m[1m787[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m4:09:30 AM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/hint[39m
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1864:16)
+[2m4:09:40 AM[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/auth/hint[39m
+Error: connect ECONNREFUSED 127.0.0.1:8000
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1864:16)
+[2m4:18:44 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:18:44 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:18:44 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:20:17 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:20:17 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:20:17 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:20:40 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:20:40 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:20:40 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:21:39 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:21:39 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:21:39 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:21:51 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:21:51 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:21:51 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:22:15 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:22:16 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:22:16 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:23:34 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:23:34 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:23:34 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:24:15 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:24:15 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:24:15 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:33:24 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:33:24 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 2 errors:
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:411:66: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:648:130: ERROR: Cannot use "||" with "??" without parentheses[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts[39m:411:66
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  409|      for (const [id, a] of Object.entries<any>(A)) { const k = `${Math.round(a.xz[0] / 40)}_${Math.round(a.xz[1] / 40)}`; (groups.get(k) || groups.set(k, []).get(k)!).push(id); }
+  410|      for (const [, ids] of groups) ids.forEach((id, i) => {
+  411|        const a = A[id]; const lc = LAYER_COL[a.layer] ?? N.aquaD.d || N.aquaD; const mat = new THREE.MeshStandardMaterial({ color: lc, roughness: 0.4, metalness: 0.1 });
+     |                                                                    ^
+  412|        const mesh = new THREE.Mesh(a.layer === "internet" ? new THREE.IcosahedronGeometry(7, 1) : new THREE.CylinderGeometry(4.6, 5.2, 1.5, 24), mat); mesh.userData.id = id;
+  413|        const icon = iconSprite(ICON_OF(id, a.layer), "#" + lc.toString(16).padStart(6, "0"), id === "INTERNET" ? 13 : 9.5); icon.position.y = id === "INTERNET" ? 0 : 6.5; icon.userData.id = id; mesh.add(icon);
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  646|      const pathSet = new Set<string>(this.pathIds); const pathOn = pathSet.size >= 1; const seeAdv = ["analyst", "admin", "operator"].includes(ui.role);
+  647|      for (const n of this.nodes.values()) {
+  648|        const st = s.nodes?.[n.id] || "normal"; const r = (rrw[n.id] || 0) / mx; const lcol = LAYER_COL[n.asset.layer] ?? N.aquaD.d || N.aquaD; let col = new THREE.Color(lcol), em = 0;
+     |                                                                                                                                    ^
+  649|        if (ui.layers.risk) col = riskColor(Math.pow(r, 0.6));
+  650|        if (pathOn && pathSet.has(n.id)) { col = new THREE.Color(ui.pathKind === "defence" ? N.aquaD.d || N.aquaD : HOT); em = 0.3; }
+  [39m
+      at failureErrorWithLog (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:1472:15)
+      at C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:755:50
+      at responseCallbacks.<computed> (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:622:9)
+      at handleIncomingPacket (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:677:12)
+      at Socket.readFromStdout (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:600:7)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2m4:33:24 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:411:66: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:648:130: ERROR: Cannot use "||" with "??" without parentheses
+[2m4:33:24 AM[22m [31m[1m[vite][22m[39m Pre-transform error: Transform failed with 2 errors:
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:411:66: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:648:130: ERROR: Cannot use "||" with "??" without parentheses
+[2m4:33:24 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 2 errors:
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:411:66: ERROR: Cannot use "||" with "??" without parentheses
+C:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts:648:130: ERROR: Cannot use "||" with "??" without parentheses[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/Asus/Desktop/gitdecoy/BUTTERFLYEFFECT_D3C0Y_SahilSawlani/frontend/src/scene/CityScene.ts[39m:411:66
+[33m  
+  [33mCannot use "||" with "??" without parentheses[33m
+  409|      for (const [id, a] of Object.entries<any>(A)) { const k = `${Math.round(a.xz[0] / 40)}_${Math.round(a.xz[1] / 40)}`; (groups.get(k) || groups.set(k, []).get(k)!).push(id); }
+  410|      for (const [, ids] of groups) ids.forEach((id, i) => {
+  411|        const a = A[id]; const lc = LAYER_COL[a.layer] ?? N.aquaD.d || N.aquaD; const mat = new THREE.MeshStandardMaterial({ color: lc, roughness: 0.4, metalness: 0.1 });
+     |                                                                    ^
+  412|        const mesh = new THREE.Mesh(a.layer === "internet" ? new THREE.IcosahedronGeometry(7, 1) : new THREE.CylinderGeometry(4.6, 5.2, 1.5, 24), mat); mesh.userData.id = id;
+  413|        const icon = iconSprite(ICON_OF(id, a.layer), "#" + lc.toString(16).padStart(6, "0"), id === "INTERNET" ? 13 : 9.5); icon.position.y = id === "INTERNET" ? 0 : 6.5; icon.userData.id = id; mesh.add(icon);
+  
+  [33mCannot use "||" with "??" without parentheses[33m
+  646|      const pathSet = new Set<string>(this.pathIds); const pathOn = pathSet.size >= 1; const seeAdv = ["analyst", "admin", "operator"].includes(ui.role);
+  647|      for (const n of this.nodes.values()) {
+  648|        const st = s.nodes?.[n.id] || "normal"; const r = (rrw[n.id] || 0) / mx; const lcol = LAYER_COL[n.asset.layer] ?? N.aquaD.d || N.aquaD; let col = new THREE.Color(lcol), em = 0;
+     |                                                                                                                                    ^
+  649|        if (ui.layers.risk) col = riskColor(Math.pow(r, 0.6));
+  650|        if (pathOn && pathSet.has(n.id)) { col = new THREE.Color(ui.pathKind === "defence" ? N.aquaD.d || N.aquaD : HOT); em = 0.3; }
+  [39m
+      at failureErrorWithLog (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:1472:15)
+      at C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:755:50
+      at responseCallbacks.<computed> (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:622:9)
+      at handleIncomingPacket (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:677:12)
+      at Socket.readFromStdout (C:\Users\Asus\Desktop\gitdecoy\BUTTERFLYEFFECT_D3C0Y_SahilSawlani\frontend\node_modules\esbuild\lib\main.js:600:7)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2m4:38:17 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:38:17 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:38:17 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m4:43:46 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Hud.tsx[22m
+[2m4:43:46 AM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/components/Hud.tsx[22m Could not Fast Refresh. Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m4:43:46 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m

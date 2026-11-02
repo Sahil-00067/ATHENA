@@ -1,4 +1,4 @@
-﻿# environments and build output
+# environments and build output
 .venv/
 node_modules/
 frontend/dist/
@@ -12,9 +12,11 @@ data/vault/
 data/*.db
 data/_*
 data/*.log
+data/live_events.jsonl
 # scratch files
 temp.*
 prof.out
+patch_*.py
 # superseded model variants (the selected policy ppo_policy.pt and its evaluation are kept)
 data/ppo_policy_s*.pt
 data/ppo_policy_v*.pt

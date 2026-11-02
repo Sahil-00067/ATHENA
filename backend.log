@@ -1,0 +1,11 @@
+[boot] physics oracle ...
+numba cannot be imported and numba functions are disabled.
+Probably the execution is slow.
+Please install numba to gain a massive speedup.
+(or if you prefer slow execution, set the flag numba=False to avoid this warning!)
+[boot] training watchdog ...
+[boot] ready in 3.7s
+[boot] PPO policy not loaded: No module named 'torch'
+
+  ATHENA is ready ->  http://127.0.0.1:8000   (risk numbers appear a few seconds after you sign in)
+

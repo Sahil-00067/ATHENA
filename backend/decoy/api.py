@@ -25,12 +25,18 @@ from .lab_api import make_router
 from .lab_service import LabService
 from .runtime import Runtime
 from .security import Auth, AirGap, RateLimiter
+import hmac, secrets
+from collections import deque
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 DIST = ROOT / "frontend" / "dist"
 ID = r"^[A-Za-z0-9_:\-\.]{1,64}$"
 
 state: dict = {}
+
+DECOY_DEMO = os.environ.get("DECOY_DEMO", "1") == "1"
+SENSOR_KEY: str = os.environ.get("DECOY_SENSOR_KEY") or ("decoy-lab-key" if DECOY_DEMO else secrets.token_urlsafe(16))
+LIVE: deque = deque(maxlen=300)
 
 
 @asynccontextmanager
@@ -543,6 +549,53 @@ def _plain(o):
         return float(o)
     except (TypeError, ValueError):
         return str(o)
+
+
+
+# ---------------------------------------------------------------- live sensor
+from typing import List as _List
+class LiveEvent(BaseModel):
+    kind: Literal["alert", "learning_done", "heartbeat"]
+    host: str = Field(max_length=128)
+    label: str | None = Field(default=None, max_length=64)
+    severity: float | None = Field(default=None, ge=0.0, le=1.0)
+    offender: str | None = Field(default=None, max_length=64)
+    syn: int | None = None
+    ports: int | None = None
+    targets: _List[int] | None = None
+    score: float | None = None
+    action: str | None = Field(default=None, max_length=512)
+    note: str | None = Field(default=None, max_length=512)
+    t: str | None = Field(default=None, max_length=32)
+
+
+@app.post("/api/live/event", status_code=204)
+async def live_event(body: LiveEvent, request: Request):
+    key = request.headers.get("X-Sensor-Key", "")
+    if not hmac.compare_digest(key.encode(), SENSOR_KEY.encode()):
+        raise HTTPException(403, "bad key")
+    ev = body.model_dump()
+    ev["received"] = ev.get("t") or ""
+    LIVE.append(ev)
+    try:
+        rt = state.get("rt")
+        if rt and body.kind == "alert":
+            rt.bb.append("live_sensor_alert", ev, actor="sensor")
+    except Exception:
+        pass
+
+
+@app.get("/api/live")
+def live_status(u=Depends(user_for("read"))):
+    events = list(LIVE)
+    alerts = [e for e in events if e.get("kind") == "alert"]
+    hosts = list({e["host"] for e in events if e.get("host")})
+    return dict(
+        events=events[-50:],
+        alerts=len(alerts),
+        last_alert=alerts[-1] if alerts else None,
+        hosts=hosts,
+    )
 
 
 @app.get("/api/health")

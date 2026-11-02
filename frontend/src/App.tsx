@@ -9,6 +9,7 @@ import { Box, Ic, Num, Stat } from "./components/ui";
 import { ZeroDayView } from "./components/ZeroDay";
 import { CityView, DefendView, FixView, PathView, ProofView, SafetyView } from "./components/Views";
 import { LabView } from "./components/Lab";
+import { LiveView } from "./components/Live";
 import { HowView } from "./components/How";
 import { WhyView } from "./components/Why";
 import { PredictView } from "./components/Predict";
@@ -20,10 +21,10 @@ import { toast } from "./store";
 
 const NAV: { id: View; label: string; icon: string }[] = [
   { id: "city", label: "Overview", icon: "city" }, { id: "predict", label: "Predict", icon: "eye" }, { id: "path", label: "Paths", icon: "route" }, { id: "fix", label: "Fix", icon: "wrench" }, { id: "lab", label: "What-if", icon: "target" },
-  { id: "defend", label: "Defend", icon: "shield" }, { id: "zeroday", label: "Zero-day", icon: "bolt" }, { id: "proof", label: "Proof", icon: "chart" }, { id: "safety", label: "Safety", icon: "lock" },
+  { id: "defend", label: "Defend", icon: "shield" }, { id: "live", label: "Live", icon: "radio" }, { id: "zeroday", label: "Zero-day", icon: "bolt" }, { id: "proof", label: "Proof", icon: "chart" }, { id: "safety", label: "Safety", icon: "lock" },
   { id: "how", label: "How it works", icon: "play" }, { id: "why", label: "Why us", icon: "sparkle" },
 ];
-const PANEL: Record<View, () => JSX.Element> = { city: CityView, predict: PredictView, path: PathView, fix: FixView, lab: LabView, defend: DefendView, zeroday: ZeroDayView, proof: ProofView, safety: SafetyView, how: HowView, why: WhyView };
+const PANEL: Record<View, () => JSX.Element> = { city: CityView, predict: PredictView, path: PathView, fix: FixView, lab: LabView, defend: DefendView, live: LiveView, zeroday: ZeroDayView, proof: ProofView, safety: SafetyView, how: HowView, why: WhyView };
 
 const Mark = ({ size = 30 }) => <img src="/athena-mark.png" alt="ATHENA" height={size} style={{ height: size, width: "auto", display: "block" }} />;
 
@@ -188,7 +189,7 @@ function SceneHost({ hidden }: { hidden: boolean }) {
   type Draw = { nodes: string[]; edges: string[]; kind: string; segs?: string[][]; marks?: string[] };
   const draw = useMemo<Draw>(() => {   // what to highlight: whatever the person pressed in the side panel, else the chosen route, else the live attacker
     if (focus) return { nodes: focus.route?.nodes || [], edges: focus.edges || [], segs: focus.segs, marks: focus.marks, kind: focus.kind };
-    if ((view === "path" || view === "lab") && pathSel) return { nodes: pathSel.nodes as string[], edges: pathSel.edges as string[], kind: "attack" };
+    if ((view === "path" || view === "lab" || view === "live") && pathSel) return { nodes: pathSel.nodes as string[], edges: pathSel.edges as string[], kind: "attack" };
     const inc = [...(snap?.incidents || [])].reverse().find((i: any) => i.status === "open" || i.status === "contained");
     if ((view === "defend" || view === "zeroday") && snap?.adversary?.length && can(role, "operator")) { const c = [...snap.adversary].reverse().find((x: any) => x.state !== "done" && x.state !== "contained") || snap.adversary[snap.adversary.length - 1]; if (c && c.compromised.length > 1) return { nodes: c.compromised as string[], edges: c.hops.map((h: any) => h.edge) as string[], kind: "attack" }; }
     if ((view === "defend" || view === "zeroday") && inc?.next_hops?.length) { const h = inc.next_hops[0]; return { nodes: [h.src, h.dst], edges: [h.edge], kind: "predicted" }; }
@@ -196,7 +197,7 @@ function SceneHost({ hidden }: { hidden: boolean }) {
   }, [view, pathSel, focus, snap?.adversary, snap?.incidents, role]);
   const dkey = draw.nodes.join(">") + "|" + draw.edges.join(",") + "|" + draw.kind + "|" + JSON.stringify(draw.segs || []) + "|" + (draw.marks || []).join(",");
   useEffect(() => {
-    const labOn = view === "lab" && labNodes.length > 0;
+    const labOn = (view === "lab" || view === "live") && labNodes.length > 0;
     scene.current?.setUI({ mode: stack ? "stack" : "city", layers, selected: labOn ? labNodes[0] : sel, xray, pathNodes: draw.nodes, pathEdges: draw.edges, pathSegs: draw.segs, pathMarks: draw.marks, pathKind: draw.kind, blast: focus?.blast || null, role, hotNodes: labOn ? labNodes : sel ? st.edges.filter((e: any) => e.source === sel || e.target === sel).flatMap((e: any) => [e.source, e.target]) : null });
   }, [stack, layers, sel, xray, dkey, role, st, view, labNodes, focus?.blast]);
   useEffect(() => { if (view === "path" && pathSel && !focus) scene.current?.flyTo("path"); }, [view, pathSel]);

@@ -14,3 +14,5 @@ services:
         value: auto_low
       - key: WITH_TORCH       # set to 1 to install PyTorch for the learned PPO responder (needs more RAM and a longer build)
         value: "0"
+      - key: DECOY_SENSOR_KEY # secret key live_sensor.py must send; override with a strong random value in the Render dashboard for production
+        value: "decoy-lab-key"

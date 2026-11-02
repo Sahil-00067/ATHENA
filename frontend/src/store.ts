@@ -1,6 +1,6 @@
 import { useSyncExternalStore } from "react";
 
-export type View = "city" | "predict" | "path" | "fix" | "lab" | "defend" | "zeroday" | "proof" | "safety" | "how" | "why";
+export type View = "city" | "predict" | "path" | "fix" | "lab" | "defend" | "live" | "zeroday" | "proof" | "safety" | "how" | "why";
 
 export interface State {
   token: string | null; user: string | null; role: string | null;
