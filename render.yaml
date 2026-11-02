@@ -1,18 +1,8 @@
-# Render Blueprint: New > Blueprint > pick this repo. Everything below can also be set by hand in the dashboard.
 services:
   - type: web
-    name: athena
-    runtime: docker
-    dockerfilePath: ./Dockerfile
-    plan: standard            # 2 GB RAM. The free and 512 MB plans will most likely run out of memory.
-    healthCheckPath: /api/health
-    autoDeploy: true
-    envVars:
-      - key: DECOY_DEMO       # 1 = the login page shows the demo accounts and codes (needed for a judged demo; anyone with the URL can see them)
-        value: "1"
-      - key: ATHENA_AUTONOMY  # observe | suggest | auto_low | auto_all
-        value: auto_low
-      - key: WITH_TORCH       # set to 1 to install PyTorch for the learned PPO responder (needs more RAM and a longer build)
-        value: "0"
-      - key: DECOY_SENSOR_KEY # secret key live_sensor.py must send; override with a strong random value in the Render dashboard for production
-        value: "decoy-lab-key"
+    name: athena-backend
+    env: python
+    plan: free
+    pythonVersion: "3.13"
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn backend.decoy.api:app --host 0.0.0.0 --port $PORT
